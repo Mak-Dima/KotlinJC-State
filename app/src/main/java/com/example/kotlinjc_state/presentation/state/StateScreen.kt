@@ -14,11 +14,14 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.PreviewScreenSizes
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.rememberNavController
 
 @Composable
 fun StateScreen(innerPadding: PaddingValues) {
 
     var counter by remember { mutableIntStateOf(1) }
+
 
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
