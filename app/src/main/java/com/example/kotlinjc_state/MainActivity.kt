@@ -10,6 +10,8 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.kotlinjc_state.presentation.editState.EditState
+import com.example.kotlinjc_state.presentation.editState.EditStateScreen
 import com.example.kotlinjc_state.presentation.route.Route
 import com.example.kotlinjc_state.presentation.route.RouteScreen
 import com.example.kotlinjc_state.presentation.state.State
@@ -39,6 +41,16 @@ class MainActivity : ComponentActivity() {
                             StateScreen(
                                 onGoBack = { navController.popBackStack() },
                                 innerPadding = innerPadding
+                            )
+                        }
+
+                        composable<EditState> {
+                            EditStateScreen(
+                                innerPadding = innerPadding,
+                                counter = 1,
+                                onGoBack = { navController.popBackStack() },
+                                onIncrement = {},
+                                onDecrement = {}
                             )
                         }
                     }
