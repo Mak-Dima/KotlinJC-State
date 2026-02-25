@@ -21,7 +21,7 @@ object Route
 
 @Composable
 fun RouteScreen(
-    onNavigateToState: () -> Unit,
+    onNavigateToStateFlow: () -> Unit,
     innerPadding: PaddingValues
 ) {
     Column(
@@ -40,7 +40,7 @@ fun RouteScreen(
             .padding(innerPadding)
     ) {
         Button(
-            onClick = { onNavigateToState() }
+            onClick = { onNavigateToStateFlow() }
         ) { Text("State") }
     }
 }

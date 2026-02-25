@@ -25,13 +25,11 @@ object State
 
 @Composable
 fun StateScreen(
+    counter: Int,
     onGoBack: () -> Unit,
     onEdit: () -> Unit,
     innerPadding: PaddingValues
 ) {
-
-    var counter by remember { mutableIntStateOf(1) }
-
     Box(
         modifier = Modifier
             .fillMaxSize()
@@ -71,6 +69,7 @@ fun StateScreen(
 @Composable
 fun StateScreenPreview() {
     StateScreen(
+        counter = 1,
         onGoBack = {},
         onEdit = {},
         innerPadding = PaddingValues()
