@@ -26,6 +26,7 @@ object State
 @Composable
 fun StateScreen(
     onGoBack: () -> Unit,
+    onEdit: () -> Unit,
     innerPadding: PaddingValues
 ) {
 
@@ -51,6 +52,14 @@ fun StateScreen(
             Text("Go back")
         }
 
+        Button(
+            onClick = { onEdit() },
+            modifier = Modifier
+                .align(Alignment.TopEnd)
+        ) {
+            Text("Edit")
+        }
+
         Text(
             text = "Counter: $counter",
             modifier = Modifier.align(Alignment.Center) // Centered the counter
@@ -63,6 +72,7 @@ fun StateScreen(
 fun StateScreenPreview() {
     StateScreen(
         onGoBack = {},
+        onEdit = {},
         innerPadding = PaddingValues()
     )
 }

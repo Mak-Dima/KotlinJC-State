@@ -40,6 +40,7 @@ class MainActivity : ComponentActivity() {
                         composable<State> { 
                             StateScreen(
                                 onGoBack = { navController.popBackStack() },
+                                onEdit = { navController.navigate(EditState) },
                                 innerPadding = innerPadding
                             )
                         }
